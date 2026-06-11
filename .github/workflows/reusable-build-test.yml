@@ -18,6 +18,11 @@ on:
         description: Test Result
         value: ${{ jobs.build.outputs.test_result }}
 
+permissions:
+  contents: read
+  pull-requests: write
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
